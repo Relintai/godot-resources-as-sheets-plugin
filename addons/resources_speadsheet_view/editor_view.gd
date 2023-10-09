@@ -12,6 +12,7 @@ export(Array, Script) var cell_editor_classes := []
 export var path_folder_path := NodePath("")
 export var path_recent_paths := NodePath("")
 export var path_table_root := NodePath("")
+export var path_table_root_scroll_container := NodePath("")
 export var path_property_editors := NodePath("")
 export var path_columns := NodePath("")
 export var path_hide_columns_button := NodePath("")
@@ -79,6 +80,10 @@ func _ready():
 	
 	if recent_paths.size() > 0:
 		display_folder(recent_paths[0], "resource_name", false, true)
+		
+	var sc : ScrollContainer = get_node(path_table_root_scroll_container) as ScrollContainer
+	
+	sc.get_h_scrollbar().connect(@"scrolling", self, @"_update_scroll")
 
 
 func _on_filesystem_changed():
