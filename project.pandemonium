@@ -10,93 +10,91 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
-"class": "CellEditor",
-"language": "GDScript",
+"class": @"CellEditor",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/typed_cells/cell_editor.gd"
 }, {
 "base": "CellEditor",
-"class": "CellEditorArray",
-"language": "GDScript",
+"class": @"CellEditorArray",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/typed_cells/cell_editor_array.gd"
 }, {
 "base": "GridContainer",
-"class": "SettingsGrid",
-"language": "GDScript",
+"class": @"SettingsGrid",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/settings_grid.gd"
 }, {
 "base": "Control",
-"class": "SheetsDockEditor",
-"language": "GDScript",
+"class": @"SheetsDockEditor",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/typed_editors/dock_base.gd"
 }, {
 "base": "Reference",
-"class": "SpreadsheetEditFormat",
-"language": "GDScript",
+"class": @"SpreadsheetEditFormat",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_base.gd"
 }, {
 "base": "SpreadsheetEditFormatTres",
-"class": "SpreadsheetEditFormatCsv",
-"language": "GDScript",
+"class": @"SpreadsheetEditFormatCsv",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_csv.gd"
 }, {
 "base": "SpreadsheetEditFormat",
-"class": "SpreadsheetEditFormatTres",
-"language": "GDScript",
+"class": @"SpreadsheetEditFormatTres",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_tres.gd"
 }, {
 "base": "Reference",
-"class": "SpreadsheetExportFormatCsv",
-"language": "GDScript",
+"class": @"SpreadsheetExportFormatCsv",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/import_export/formats_export/export_csv.gd"
 }, {
 "base": "Resource",
-"class": "SpreadsheetImport",
-"language": "GDScript",
+"class": @"SpreadsheetImport",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/import_export/spreadsheet_import.gd"
 }, {
 "base": "Reference",
-"class": "SpreadsheetImportFormatCsv",
-"language": "GDScript",
+"class": @"SpreadsheetImportFormatCsv",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/import_export/formats_import/import_csv.gd"
 }, {
 "base": "Reference",
-"class": "TextEditingUtils",
-"language": "GDScript",
+"class": @"TextEditingUtils",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/text_editing_utils.gd"
 }, {
 "base": "Button",
-"class": "ThemeIconButton",
-"language": "GDScript",
+"class": @"ThemeIconButton",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/editor_icon_button.gd"
 }, {
 "base": "Control",
-"class": "ThemeStylebox",
-"language": "GDScript",
+"class": @"ThemeStylebox",
+"language": @"GDScript",
 "path": "res://addons/resources_speadsheet_view/editor_stylebox_overrider.gd"
 }, {
 "base": "Resource",
-"class": "Upgrades",
-"language": "GDScript",
+"class": @"Upgrades",
+"language": @"GDScript",
 "path": "res://example/Random Upgrades/upgrades_csv/upgrades.gd"
 } ]
 _global_script_class_icons={
-"CellEditor": "",
-"CellEditorArray": "",
-"SettingsGrid": "",
-"SheetsDockEditor": "",
-"SpreadsheetEditFormat": "",
-"SpreadsheetEditFormatCsv": "",
-"SpreadsheetEditFormatTres": "",
-"SpreadsheetExportFormatCsv": "",
-"SpreadsheetImport": "",
-"SpreadsheetImportFormatCsv": "",
-"TextEditingUtils": "",
-"ThemeIconButton": "",
-"ThemeStylebox": "",
-"Upgrades": ""
+@"ThemeIconButton": "",
+@"ThemeStylebox": "",
+@"SettingsGrid": "",
+@"TextEditingUtils": "",
+@"SpreadsheetImport": "",
+@"SpreadsheetEditFormat": "",
+@"SpreadsheetEditFormatCsv": "",
+@"SpreadsheetEditFormatTres": "",
+@"SpreadsheetExportFormatCsv": "",
+@"SpreadsheetImportFormatCsv": "",
+@"CellEditor": "",
+@"CellEditorArray": "",
+@"SheetsDockEditor": "",
+@"Upgrades": ""
 }
-color_rows=false
-color_arrays=true
 
 [addons]
 
@@ -109,14 +107,19 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 
 [application]
 
-config/name="Addon: Resources as Sheets"
+config/name="Resources as Sheets"
+config/icon="res://icon.png"
 
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/resources_speadsheet_view/plugin.cfg" )
 
+[physics]
+
+common/enable_pause_aware_picking=true
+
 [rendering]
 
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
