@@ -53,7 +53,11 @@ func has_row_names():
 
 func import_from_path(folderpath : String, insert_func : FuncRef, sort_by : String, sort_reverse : bool = false) -> Array:
 	var rows := []
-	var dir := Directory.new()
+	var dir : Directory = Directory.new()
+	
+	if !dir.dir_exists(folderpath):
+		return Array()
+	
 	dir.open(folderpath)
 	dir.list_dir_begin()
 
