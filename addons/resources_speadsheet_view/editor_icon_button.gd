@@ -11,4 +11,4 @@ func _ready():
 
 func _set_icon_name(v):
 	icon_name = v
-	icon = get_icon(v, "EditorIcons")
+	icon = get_theme_icon(v, "EditorIcons")

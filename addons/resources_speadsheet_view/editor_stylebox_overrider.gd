@@ -13,9 +13,9 @@ func _ready():
 
 func _set_box_name(v):
 	box_name = v
-	add_stylebox_override(box_name, get_stylebox(box_name, box_class))
+	add_theme_stylebox_override(box_name, get_theme_stylebox(box_name, box_class))
 
 
 func _set_box_class(v):
 	box_class = v
-	add_stylebox_override(box_name, get_stylebox(box_name, box_class))
+	add_theme_stylebox_override(box_name, get_theme_stylebox(box_name, box_class))

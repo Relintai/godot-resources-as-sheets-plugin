@@ -18,9 +18,9 @@ var editbox_action : int
 
 
 func _ready():
-	editbox_input.get_node("../..").add_stylebox_override(
+	editbox_input.get_node("../..").add_theme_stylebox_override(
 		"panel",
-		get_stylebox("Content", "EditorStyles")
+		get_theme_stylebox("Content", "EditorStyles")
 	)
 
 

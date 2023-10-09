@@ -76,7 +76,9 @@ func _ready():
 		all_cell_editors[all_cell_editors.size() - 1].hint_strings_array = column_hint_strings
 	
 	get_node(path_recent_paths).selected = 0
-	display_folder(recent_paths[0], "resource_name", false, true)
+	
+	if recent_paths.size() > 0:
+		display_folder(recent_paths[0], "resource_name", false, true)
 
 
 func _on_filesystem_changed():

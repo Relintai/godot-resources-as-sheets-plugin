@@ -26,7 +26,7 @@ func _ready():
 	)
 	create_file_button.text = "Create File"
 	create_file_button.visible = true
-	create_file_button.icon = get_icon("New", "EditorIcons")
+	create_file_button.icon = get_theme_icon("New", "EditorIcons")
 
 
 func _on_create_file_pressed():

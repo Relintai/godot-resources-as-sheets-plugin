@@ -36,4 +36,4 @@ func has_main_screen():
 
 func get_plugin_icon():
 	# Until I add an actual icon, this'll do.
-	return get_editor_interface().get_base_control().get_icon("VisualScriptComment", "EditorIcons")
+	return get_editor_interface().get_base_control().get_theme_icon("VisualScriptComment", "EditorIcons")
